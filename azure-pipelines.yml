@@ -50,20 +50,6 @@ stages:
 
   - template: scripts/pack.yml
     parameters:
-      name: 'pack_preview'
-      displayName: 'Pack Certes preview'
-      projectName: 'Certes'
-      previewPackage: 'true'
-
-  - template: scripts/pack.yml
-    parameters:
-      name: 'pack'
-      displayName: 'Pack Certes'
-      projectName: 'Certes'
-      previewPackage: 'false'
-
-  - template: scripts/pack.yml
-    parameters:
       name: 'pack_tool_preview'
       displayName: 'Pack Certes.Tool preview'
       projectName: 'Certes.Cli'
