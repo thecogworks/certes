@@ -7,28 +7,29 @@
     <TargetFrameworks Condition="'$(CERTES_TOOL_ASSEMBLYVERSION)' != ''">netcoreapp2.1</TargetFrameworks>
     <AssemblyVersion>1.0.4</AssemblyVersion>
     <AssemblyVersion Condition="$(CERTES_TOOL_ASSEMBLYVERSION) != ''">$(CERTES_TOOL_ASSEMBLYVERSION)</AssemblyVersion>
-    <Version>$(AssemblyVersion)$(CertesPackageVersionSuffix)</Version>
+    <Version>1.0.5</Version>
     <FileVersion>$(AssemblyVersion)$(CertesFileVersionSuffix)</FileVersion>
     <InformationalVersion>$(AssemblyVersion)$(CertesInformationalVersionSuffix)</InformationalVersion>
     <Authors>Certes Contributors</Authors>
     <Company />
     <Product>Certes ACME Client CLI</Product>
-    <Description>Dotnet tool for Automated Certificate Management Environment (ACME) protocol, powered by Certes.</Description>
+    <Description>Dotnet tool for Automated Certificate Management Environment (ACME) protocol, powered by Certes. Based on https://github.com/fszlin/certes</Description>
     <PackageType>DotnetTool</PackageType>
-    <PackageProjectUrl>https://github.com/fszlin/certes</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/thecogworks/certes</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>Certes;letsencrypt;ACME;HTTPS;SSL;Certificate;dotnettool</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/fszlin/certes</RepositoryUrl>
-    <PackageId>dotnet-certes</PackageId>
+    <RepositoryUrl>https://github.com/thecogworks/certes</RepositoryUrl>
+    <PackageId>cogworks-dotnet-certes</PackageId>
     <PackageIcon>logo.png</PackageIcon>
     <PackAsTool Condition="'$(CERTES_TOOL_ASSEMBLYVERSION)' != ''">true</PackAsTool>
     <ToolCommandName>certes</ToolCommandName>
     <AssemblyName>dotnet-certes</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\misc\logo.png" Pack="true" PackagePath="\"/>
+    <None Include="..\..\misc\logo.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <PropertyGroup>
