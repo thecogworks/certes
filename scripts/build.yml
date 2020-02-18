@@ -12,7 +12,13 @@ jobs:
   pool: ${{ parameters.pool }}
 
   steps:
-
+      
+  - task: UseDotNet@2
+    displayName: 'Add dotnet 3.x'
+    inputs:
+      packageType: 'sdk'
+      version: '3.x'
+      
   - task: UseDotNet@2
     displayName: 'Add dotnet 2.x'
     inputs:
